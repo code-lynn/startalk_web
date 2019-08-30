@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--injectcss-->
+  <title>startalk-chat</title>
+</head>
+<body data-startalknav='<%=navConfig%>' data-startalkkeys='<%=keys%>' >
+  <div id="page-top" data-spy="scroll" data-target=".navbar-custom"></div>
+  <script>
+      const body = document.body
+      const startalkNav = JSON.parse(body.dataset.startalknav)
+      const startalkKeys = JSON.parse(body.dataset.startalkkeys)
+  </script>
+  <!-- <script type="text/javascript" src="MODULES/jquery/jquery-1.11.1.js"></script> -->
+  <!--injectjs-->
+</body>
+</html>

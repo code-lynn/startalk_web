@@ -1,0 +1,129 @@
+require('stylesCommon/reset.css');
+
+body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: PingFang SC, Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+}
+
+.app-fullscreen .m-header {
+    padding-top: 10px;
+}
+
+.app-fullscreen .m-header .regret {
+    top: 10px;
+}
+
+.g-wrap {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+    background-color: #F5F5F5;
+    height: 100%;
+}
+
+.g-flexbox-column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.g-flexbox, .g-flexbox-start, .g-flexbox-column {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.m-header {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #00bcd4;
+    background-color: #00bcd4;
+    color: #fff;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    position: relative;
+}
+
+.m-header .title {
+    font-size: 17px;
+}
+
+.m-header .regret {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    left: 5px;
+    width: 34px;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    font-weight: 400;
+    
+}
+
+.m-footer {
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+    height: 48px;
+    line-height: 48px;
+    background-color: #00bcd4;
+}
+
+.m-footer.disabled {
+    background-color: #999999;
+}
+
+.container {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    height: auto;
+    display: block;
+    padding: 10px;
+}
+
+.container .title {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #f60;
+}
+
+.container .inp {
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+    border: 1px solid #00bcd4;
+    border-radius: 2px;
+    padding: 5px 20px;
+    color: #00bcd4;
+}
+
+.container .msg {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.yo-ico {
+    font-family: yofont !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+@font-face {
+    font-family: yofont;
+    src: url("../../../../assets/fonts/yofont.woff") format("woff"), url("../../../../assets/fonts/yofont.ttf") format("truetype");
+}

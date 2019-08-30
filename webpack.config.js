@@ -22,22 +22,31 @@ const ASSETS = path.join(__dirname, '/dist/assets/')
 
 // 用户可配置 config 
 const devPaths ={
-  COMMON: path.join(__dirname , '/src/web/common'),
-  COMPONENTS: path.join(__dirname , '/src/web/components'),
-  CONTAINERS: path.join(__dirname , '/src/web/containers'),
-  HOC: path.join(__dirname , '/src/web/hoc'),
-  IMAGES: path.join(__dirname , '/src/web/images'),
   MODULES: path.join(__dirname , '/src/web/modules'),
-  STORE: path.join(__dirname , '/src/web/store'),
-  CONFIG: path.join(__dirname , '/src/web/config'),
-  strophe: 'strophe.js'
+  common: path.join(__dirname , '/src/web/scripts/page/common'),
+  stylesCommon: path.join(__dirname , '/src/web/styles/common/'),
+  emotions: path.join(__dirname , '/src/web/scripts/lib/emotions'),
+  jp: path.join(__dirname , '/src/web/scripts/lib/jquery-plugins'),
+  utils: path.join(__dirname , '/src/web/scripts/utils'),
+  page: path.join(__dirname , '/src/web/scripts/page'),
+  tmpl: path.join(__dirname , '/src/web/scripts/templates'),
+  lib: path.join(__dirname , '/src/web/scripts/lib/'),
+  qchat: path.join(__dirname , '/src/web/scripts/core/'),
+  fonts: path.join(__dirname , '/src/assets/fonts'),
+  png: path.join(__dirname , '/src/assets/png'),
+  public: path.join(__dirname , '/src/assets/public'),
+  touch: path.join(__dirname , '/src/assets/touch'),
+  web: path.join(__dirname , '/src/assets/web'),
+  voice: path.join(__dirname , '/src/assets/voice'),
 }
 
 // 用户可配置 config 
 const entry = () => {
   return {
-    _startalk_sdk: './src/web/sdk/entry.js',
-    index: './src/web/app/pages/index/entry.js'
+    // _startalk_sdk: './src/web/sdk/entry.js',
+    // index: './src/web/app/pages/index/entry.js'
+    qchat_web: './src/web/scripts/page/web/qchat.js',
+    // qchat_touch: './src/web/scripts/page/touch/qchat.js'
   }
 }
 
@@ -132,9 +141,13 @@ let webpackConfig = {
     new CopyPlugin([{
       from: path.join(__dirname, './package.json'), 
       to: path.join(__dirname, '/dist/package.json') 
+    },
+    {
+      from: path.join(__dirname, './jquery/jquery-1.11.1.js'), 
+      to: path.join(__dirname, '/dist/jquery/jquery-1.11.1.js') 
     }]),
     new HtmlWebpackPlugin({
-      template:  __dirname + '/src/web/app/index.html',
+      template:  __dirname + '/src/web/html/index-web.html',
       //development 环境使用 webpack-dev-middleware 插件打包资源到内存
       //production 环境打包到 dist/view 作为 node 的 html 模板
       filename: _mode === 'production' ? '../views/index.html' : 'index.html',
