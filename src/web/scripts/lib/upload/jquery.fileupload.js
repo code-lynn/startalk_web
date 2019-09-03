@@ -11,7 +11,7 @@
 
 /* jshint nomen:false */
 /* global define, require, window, document, location, Blob, FormData */
-
+import 'MODULES/jquery/jquery-1.11.1.js'
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
         // Register as an anonymous AMD module:

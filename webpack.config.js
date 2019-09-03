@@ -46,7 +46,7 @@ const entry = () => {
     // _startalk_sdk: './src/web/sdk/entry.js',
     // index: './src/web/app/pages/index/entry.js'
     qchat_web: './src/web/scripts/page/web/qchat.js',
-    // qchat_touch: './src/web/scripts/page/touch/qchat.js'
+    qchat_touch: './src/web/scripts/page/touch/qchat.js'
   }
 }
 
@@ -141,10 +141,6 @@ let webpackConfig = {
     new CopyPlugin([{
       from: path.join(__dirname, './package.json'), 
       to: path.join(__dirname, '/dist/package.json') 
-    },
-    {
-      from: path.join(__dirname, './jquery/jquery-1.11.1.js'), 
-      to: path.join(__dirname, '/dist/jquery/jquery-1.11.1.js') 
     }]),
     new HtmlWebpackPlugin({
       template:  __dirname + '/src/web/html/index-web.html',

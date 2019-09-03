@@ -10,7 +10,7 @@
  */
 
 /* global define, require, window, document */
-
+import 'MODULES/jquery/jquery-1.11.1.js'
 (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
