@@ -11,13 +11,16 @@
 
 /* jshint nomen:false */
 /* global define, require, window, document, location, Blob, FormData */
-import 'MODULES/jquery/jquery-1.11.1.js'
+// import $ from 'MODULES/jquery/jquery-1.11.1.js'
+// require('MODULES/jquery/jquery-1.11.1.js')
+import '../jquery/jquery.js' 
+import 'lib/upload/jquery.ui.widget.js' 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
         // Register as an anonymous AMD module:
         define([
-            'jquery',
-            'jquery.ui.widget'
+            '../jquery/jquery.js',
+            './jquery.ui.widget.js'
         ], factory);
     } else if (typeof exports === 'object') {
         // Node/CommonJS:

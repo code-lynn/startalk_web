@@ -34,7 +34,7 @@
 (function($, QNR) {
     'use strict';
     require('./alertify.mustache');
-    var styleStr = require('./alertifycss.string');
+    var styleStr = require('./alertifycss.css');
 
     var defaults = {
         id: 'j_pop_frame',

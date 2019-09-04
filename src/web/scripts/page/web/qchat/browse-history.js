@@ -5,8 +5,8 @@
 * @Last modified time: 2017-05-04T14:52:55+08:00
  * @Description  历史浏览记录
  */
-require("list.mustache");
-require("tabs.mustache");
+require("./list.mustache");
+require("./tabs.mustache");
 require("lib/qevent/index.js");
 
 var ONE_DAY = 24*60*60*1000;

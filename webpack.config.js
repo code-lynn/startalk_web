@@ -46,7 +46,7 @@ const entry = () => {
     // _startalk_sdk: './src/web/sdk/entry.js',
     // index: './src/web/app/pages/index/entry.js'
     qchat_web: './src/web/scripts/page/web/qchat.js',
-    qchat_touch: './src/web/scripts/page/touch/qchat.js'
+    // qchat_touch: './src/web/scripts/page/touch/qchat.js'
   }
 }
 
@@ -112,6 +112,10 @@ let webpackConfig = {
             loader: 'img-loader'
           }
         ]
+      },
+      {
+        test: /\.mustache$/,
+        loader: 'mustache-loader'
       },
       {
         test: /\.html$/,
